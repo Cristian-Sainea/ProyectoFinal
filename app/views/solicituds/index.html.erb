@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th> IDsolicitud </th><th> cedula de Usuario </th><th> IDservicio </th><th> Precio </th><th> Especificaciones </th>
+  </tr>
+  <% @solicituds.each do |solicitud| %>
+  <tr>
+    <td><%= solicitud.id %></td><td><%= solicitud.huesped_id %></td><td><%= solicitud.servicio_id %></td><td><%= solicitud.precio %></td><td><%= solicitud.especificaciones %></td>
+    <td><%= link_to "Editar Solicitud", edit_solicitud_path(solicitud.id) %> </td>
+    <td><%= link_to "Mostrar Solicitud", solicitud_path(solicitud) %></td>
+    <td><%= link_to "Eliminar Solicitud", solicitud_path(solicitud), method: :delete, data: {confirm: "Seguro?" } %></td>
+  </tr>
+  <% end %>
+</table>
+
+<%= link_to "Crear solicitud", new_solicitud_path %>
+<%= link_to "Pagina principal", root_path %>

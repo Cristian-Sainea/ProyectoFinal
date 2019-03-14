@@ -1,0 +1,31 @@
+<h1> Edicion Servicio! </h1>
+<% if @servicio.errors.any? %>
+  <% @servicio.errors.full_messages.each do |mensaje| %>
+    <ul>
+      <li> <%= mensaje %> </li>
+    </ul>
+  <% end %>
+<% end %>
+
+<%= form_for @servicio do |f| %>
+  <p>
+    <%= f.label :nombre %><br/>
+    <%= f.text_field :nombre  %><br/>
+    </p>
+    
+    <p>
+    <%= f.label :detalles %><br/>
+    <%= f.text_field :detalles  %><br/>
+    </p>
+    
+    <p>
+    <%= f.label :precioBase %><br/>
+    <%= f.number_field :precioBase  %><br/>
+    </p>
+       
+    <p>
+    <%= f.submit "Editar servicio" %><br/>
+    </p>
+
+   <%= link_to "Volver a indice de servicios", servicios_path %>
+<% end %>

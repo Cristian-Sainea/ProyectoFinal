@@ -1,0 +1,37 @@
+<% if @empleado.errors.any? %>
+  <% @empleado.errors.full_messages.each do |mensaje| %>
+    <ul>
+      <li> <%= mensaje %> </li>
+    </ul>
+  <% end %>
+<% end %>
+
+<%= form_for @empleado do |f| %>
+  
+    
+    <p>
+    <%= f.label :nombres %><br/>
+    <%= f.text_field :nombres  %><br/>
+    </p>
+    
+    <p>
+    <%= f.label :apellidos %><br/>
+    <%= f.text_field :apellidos  %><br/>
+    </p>
+    
+    <p>
+    <%= f.label :cedula %><br/>
+    <%= f.number_field :cedula  %><br/>
+    </p>
+    
+    <p>
+    <%= f.label :celular %><br/>
+    <%= f.number_field :celular  %><br/>
+    </p>
+           
+    <p>
+    <%= f.submit "Editar huesped" %><br/>
+    </p>
+
+   <%= link_to "Volver a indice de empleados", empleados_path %>
+<% end %>

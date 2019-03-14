@@ -1,0 +1,51 @@
+<h1> Edicion Huesped! </h1>
+<% if @huesped.errors.any? %>
+  <% @huesped.errors.full_messages.each do |mensaje| %>
+    <ul>
+      <li> <%= mensaje %> </li>
+    </ul>
+  <% end %>
+<% end %>
+
+<%= form_for @huesped do |f| %>
+  <p>
+    <%= f.label :cedula %><br/>
+    <%= f.number_field :cedula  %><br/>
+    </p>
+    
+    <p>
+    <%= f.label :nombres %><br/>
+    <%= f.text_field :nombres  %><br/>
+    </p>
+    
+    <p>
+    <%= f.label :apellidos %><br/>
+    <%= f.text_field :apellidos  %><br/>
+    </p>
+    
+    <p>
+    <%= f.label :celular %><br/>
+    <%= f.number_field :celular  %><br/>
+    </p>
+        
+    <p>
+    <%= f.label :email %><br/>
+    <%= f.email_field :email %><br/>
+    </p>
+    
+    <p>
+    <%= f.label :fecha_nacimiento %><br/>
+    <%= f.date_field :fecha_nacimiento %><br/>
+    </p>
+    
+    <p>
+    <%= f.label :pais_origen %><br/>
+    <%= f.text_field :pais_origen %><br/>
+    </p>
+    
+    <p>
+    <%= f.submit "Editar huesped" %><br/>
+    </p>
+
+   <%= link_to "Volver a indice de huespeds", huespeds_path %>
+<% end %>

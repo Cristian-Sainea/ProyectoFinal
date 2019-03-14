@@ -1,0 +1,14 @@
+<h1>Empleado Creado</h1>
+<p>
+  Titulo: <%= @empleado.cedula %>
+</p>
+<p>
+  Nombres: <%= @empleado.nombres %>
+</p>
+<p>
+  Apellidos: <%= @empleado.apellidos %>
+</p>
+
+
+ <%= link_to "Volver a indice de empleados", empleado_path %>
+ <%= link_to "Editar informacion de empleado", edit_empleado_path(@empleado.id) %>

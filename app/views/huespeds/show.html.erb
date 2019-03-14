@@ -1,0 +1,28 @@
+<h1>Huesped Creado</h1>
+<p>
+  Cedula: <%= @huesped.cedula %>
+</p>
+<p>
+  Nombres: <%= @huesped.nombres %>
+</p>
+<p>
+  Apellidos: <%= @huesped.apellidos %>
+</p>
+<p>
+  Celular: <%= @huesped.celular %>
+</p>
+
+<p>
+  Email: <%= @huesped.email %>
+</p>
+
+<p>
+  Fecha de Nacimiento: <%= @huesped.fecha_nacimiento %>
+</p>
+<p>
+  Pais de Origen: <%= @huesped.pais_origen %>
+</p>
+
+
+ <%= link_to "Volver a indice de huespeds", huespeds_path %>
+ <%= link_to "Editar informacion de huesped", edit_huesped_path(@huesped.id) %>

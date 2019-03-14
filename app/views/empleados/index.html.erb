@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th> ID Empleado </th><th> Nombres </th><th> Apellidos </th><th> Cedula </th><th> Celular </th>
+  </tr>
+  <% @empleados.each do |empleado| %>
+  <tr>
+    <td><%= empleado.id %></td><td><%= empleado.nombres %></td><td><%= empleado.apellidos %></td><td><%= empleado.cedula %></td><td><%= empleado.celular %></td>
+    <td><%= link_to "Editar Empleado", edit_empleado_path(empleado.id) %> </td>
+    <td><%= link_to "Mostrar Empleado", empleado_path(empleado) %></td>
+    <td><%= link_to "Eliminar Empleado", empleado_path(empleado), method: :delete, data: {confirm: "Seguro?" } %></td>
+  </tr>
+  <% end %>
+</table>
+
+<%= link_to "Crear nuevo Empleado", new_empleado_path %>
+<%= link_to "Pagina principal", root_path %>

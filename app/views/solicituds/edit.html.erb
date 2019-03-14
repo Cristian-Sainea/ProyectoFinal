@@ -1,0 +1,38 @@
+<h1> Edicion solicitud! </h1>
+<% if @solicitud.errors.any? %>
+  <% @solicitud.errors.full_messages.each do |mensaje| %>
+    <ul>
+      <li> <%= mensaje %> </li>
+    </ul>
+  <% end %>
+<% end %>
+
+<%= form_for @solicitud do |f| %>
+    
+<p>
+<%= f.label :huesped_id %><br/>
+<%= f.number_field :huesped_id  %><br/>
+</p>
+
+<p>
+<%= f.label :servicio_id %><br/>
+<%= f.number_field :servicio_id  %><br/>
+</p>
+
+<p>
+<%= f.label :precio %><br/>
+<%= f.number_field :precio  %><br/>
+</p>
+    
+<p>
+<%= f.label :especificaciones %><br/>
+<%= f.text_area :especificaciones %><br/>
+</p>
+    
+        
+    <p>
+    <%= f.submit "Editar solicitud" %><br/>
+    </p>
+
+   <%= link_to "Volver a indice de solicitudes", solicitud_path %>
+<% end %>

@@ -1,0 +1,19 @@
+<h1>Solicitud Creada</h1>
+<p>
+  Cedula del huesped: <%= @solicitud.huesped_id %>
+</p>
+
+<p>
+  Id del Servicio: <%= @solicitud.servicio_id %>
+</p>
+
+<p>
+  Precio: <%= @solicitud.precio %>
+</p>
+<p>
+  Especificaciones: <%= @solicitud.especificaciones %>
+</p>
+
+
+ <%= link_to "Volver a indice de solicitudes", solicituds_path %>
+ <%= link_to "Editar informacion de Solicitud", edit_solicitud_path(@solicitud.id) %>

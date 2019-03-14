@@ -1,0 +1,14 @@
+<h1>Servicio Creado</h1>
+<p>
+  Nombre: <%= @servicio.nombre %>
+</p>
+<p>
+  Detalles: <%= @servicio.detalles %>
+</p>
+<p>
+  Precio Base: $<%= @servicio.precioBase %>
+</p>
+
+
+ <%= link_to "Volver a indice de servicios", servicios_path %>
+ <%= link_to "Editar informacion de servicio", edit_servicio_path(@servicio.id) %>
