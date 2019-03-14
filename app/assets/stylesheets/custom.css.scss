@@ -2,3 +2,87 @@
 @import "bootstrap";
 
 //= require bootstrap-sprockets
+
+body{
+   background-image: image-url('Fondo.png');
+   /*background-image: url("app/assets/images/Fondo.png");*/
+   background-color: #30457C;
+   background-size: 100% 100%;
+   background-attachment: fixed;
+}
+
+.navegacion{
+   height: 50px;;
+   width : 100vw;
+   background-color: #FFBC47;
+   
+}
+
+.titulo{
+ display: inline-block;
+ padding: 0px 10px;
+ color: white;
+ font-size: 40px;
+ font-family: "Impact";  
+}
+
+.navegacion ul{
+   list-style: none;
+}
+
+.menu{
+   float: right;
+}
+
+.menu > li{
+ position: relative;
+ display: inline-block;
+}
+
+.menu >li > a{
+ display: block;
+ padding: 0px 10px;
+ color: black;
+ font-size: 35px;
+ text-decoration: none;
+ padding-top: 0;
+}
+
+/*
+.menu >li > a:hover{
+   
+}
+*/
+.submenu{
+ position: absolute;
+ background-color: #FFBC47;
+ padding: 5px;
+ width: 100%;
+ display: none;
+}
+
+.submenu li {
+ display: block;  
+ color: black;
+ font-size: 17px;
+ text-decoration: none;
+ border: 6px double #30457C;
+ border-width: thick;
+ background-color: #FFBC47;
+ margin-top : 10px;
+ margin-bottom : 10px;
+}
+
+
+.menu li:hover .submenu{
+ display: block;
+}
+
+table{
+ margin: 40px;
+ background-color: #E1E1E1;
+}
+
+table th{
+ padding: 0px 10px 0px 10px;
+}
