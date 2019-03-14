@@ -1,44 +1,44 @@
 <header>
  <nav class="navegacion">
-   <div class="titulo">UNHotel</div> 
+   <div class="titulo"><%= link_to "UNHOTEL", root_path %></div> 
    <ul class="menu">
-     <li><%= link_to "Inicio", root_path %></li>
-     <li><a href="#">Huespedes</a>
+     
+     <li><a>Huespedes</a>
       
        <ul class="submenu">
          <li><%= link_to "Crear huesped", new_huesped_path %></li>
-         <li><%= link_to "Consultar Huespedes", huespeds_index_path %></li>
+         <li><%= link_to "Consultar huespedes", huespeds_index_path %></li>
        </ul>
        
      </li>
-     <li><a href="#">Empleados</a>
+     <li><a>Empleados</a>
       
        <ul class="submenu">
-         <li><%= link_to "Crear Empleado", new_empleado_path %></li>
+         <li><%= link_to "Crear empleado", new_empleado_path %></li>
          <li><%= link_to "Consultar empleados", empleados_index_path %></li>
          
        </ul>
        
      </li>
-     
-     <li><a href="#">Pedir servicios</a>
-     
-     
-       <ul class="submenu">
-         <li><a href="#">Crear</a></li>
-         <li><%= link_to "Ver peticiones", solicituds_index_path %></li>
-       </ul>
-       
-     </li>
-     <li><a href="#">Servicios</a>
+     <li><a>Servicios</a>
      
      
        <ul class="submenu">
-         <li><a href="#">Crear</a></li>
-         <li><%= link_to "Ver servicios", servicios_index_path %></li>
+         <li><%= link_to "Crear servicio", new_servicio_path %></li>
+         <li><%= link_to "Consultar servicios", servicios_index_path %></li>
        </ul>
        
      </li>
+     <li><a>Solicitar servicios</a>
+     
+     
+       <ul class="submenu">
+         <li><%= link_to "Crear solicitud", new_solicitud_path %></li>
+         <li><%= link_to "Consultar solicitudes", solicituds_index_path %></li>
+       </ul>
+       
+     </li>
+     
      
         
    </ul>
