@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190314143333) do
+ActiveRecord::Schema.define(version: 20190314180522) do
 
   create_table "empleados", force: :cascade do |t|
     t.integer "solicitud_id"
@@ -44,6 +44,12 @@ ActiveRecord::Schema.define(version: 20190314143333) do
     t.text    "especificaciones"
     t.index ["huesped_id"], name: "index_solicituds_on_huesped_id"
     t.index ["servicio_id"], name: "index_solicituds_on_servicio_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "email"
+    t.string "role"
   end
 
 end
