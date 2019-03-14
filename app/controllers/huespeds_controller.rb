@@ -7,7 +7,7 @@ class HuespedsController < ApplicationController
     def create
          @huesped = Huesped.new(huesped_params)
         if @huesped.save
-            flash[:notice] = "El Huesped se creo satisfactoriamente"
+            flash[:notice] = "El Huesped se creó satisfactoriamente"
             redirect_to huesped_path(@huesped)
         else
             render "new"
@@ -25,7 +25,7 @@ class HuespedsController < ApplicationController
     def update
         @huesped = Huesped.find(params[:id])
          if @huesped.update(huesped_params)
-            flash[:notice] = "El post se creo satisfactoriamente"
+            flash[:notice] = "El huesped se editó satisfactoriamente"
             redirect_to huesped_path(@huesped)
         else
             render "edit"

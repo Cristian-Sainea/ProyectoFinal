@@ -7,7 +7,7 @@ class ServiciosController < ApplicationController
     def create
          @servicio = Servicio.new(servicio_params)
         if @servicio.save
-            flash[:notice] = "El servicio se creo satisfactoriamente"
+            flash[:notice] = "El servicio se creó satisfactoriamente"
             redirect_to servicio_path(@servicio)
         else
             render "new"
@@ -25,7 +25,7 @@ class ServiciosController < ApplicationController
     def update
         @servicio = Servicio.find(params[:id])
          if @servicio.update(servicio_params)
-            flash[:notice] = "El servicio se creo satisfactoriamente"
+            flash[:notice] = "El servicio se editó satisfactoriamente"
             redirect_to servicio_path(@servicio)
         else
             render "edit"

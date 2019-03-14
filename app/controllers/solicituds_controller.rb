@@ -7,7 +7,7 @@ class SolicitudsController < ApplicationController
     def create
          @solicitud = Solicitud.new(solicitud_params)
         if @solicitud.save
-            flash[:notice] = "La solicitud se creo satisfactoriamente"
+            flash[:notice] = "La solicitud se creó satisfactoriamente"
             redirect_to solicitud_path(@solicitud)
         else
             render "new"
@@ -25,7 +25,7 @@ class SolicitudsController < ApplicationController
     def update
         @solicitud = Solicitud.find(params[:id])
          if @solicitud.update(solicitud_params)
-            flash[:notice] = "La solicitud se edito satisfactoriamente"
+            flash[:notice] = "La solicitud se editó satisfactoriamente"
             redirect_to solicitud_path(@solicitud)
         else
             render "edit"

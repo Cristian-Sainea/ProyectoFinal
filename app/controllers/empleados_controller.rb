@@ -7,7 +7,7 @@ class EmpleadosController < ApplicationController
     def create
          @empleado = Empleado.new(empleado_params)
         if @empleado.save
-            flash[:notice] = "El empleado se creo satisfactoriamente"
+            flash[:notice] = "El empleado se creó satisfactoriamente"
             redirect_to empleado_path(@empleado)
         else
             render "new"
@@ -25,7 +25,7 @@ class EmpleadosController < ApplicationController
     def update
         @empleado = Empleado.find(params[:id])
          if @empleado.update(empleado_params)
-            flash[:notice] = "El Empleado se creo satisfactoriamente"
+            flash[:notice] = "El Empleado se editó satisfactoriamente"
             redirect_to empleado_path(@empleado)
         else
             render "edit"
