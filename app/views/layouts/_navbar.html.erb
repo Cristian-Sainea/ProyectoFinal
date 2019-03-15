@@ -1,6 +1,10 @@
 <header>
  <nav class="navegacion">
    <div class="titulo"><%= link_to "UNHOTEL", root_path %></div> 
+   <%= render "layouts/navbarNoUser" %>
+   <%= render "layouts/navbarAdmin" %>
+   <%= render "layouts/navbarHuesped" %>
+   <%= render "layouts/navbarNoUser" %>
    <ul class="menu">
      
      <li><a>Huespedes</a>
