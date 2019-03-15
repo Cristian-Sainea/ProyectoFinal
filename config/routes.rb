@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
     
+  get 'sessions/new'
+
     get 'solicituds/index', to: "solicituds#index"
     get 'solicituds/edit', to: "solicituds#edit"
     get 'solicituds/show', to: "solicituds#show"
@@ -20,8 +22,15 @@ Rails.application.routes.draw do
     get 'empleados/show', to: "empleados#show"
     get 'empleados/new', to: "empleados#new"
     
+    get  'users/new',  to: 'users#new'
+    get 'pages/signup', to: "pages#welcome"
+    
+    get    '/login',   to: 'sessions#new'
+    post   '/login',   to: 'sessions#create'
+    delete '/logout',  to: 'sessions#destroy'
+    
     get 'pages/welcome', to: "pages#welcome"
-    root 'pages#welcome'
+    root 'sessions#new'
     
     resources :huespeds
     resources :solicituds
