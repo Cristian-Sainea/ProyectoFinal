@@ -58,7 +58,7 @@ body{
  display: block;
  padding: 0px 10px;
  color: black;
- font-size: 35px;
+ font-size: 25px;
  text-decoration: none;
  padding-top: 0;
 }
@@ -119,7 +119,6 @@ form{
     margin-left: auto;
     margin-right: auto;
     width: 40%;
-    
 }
 
 form p {
@@ -127,10 +126,9 @@ form p {
 }
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 50%;
+  width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
-  
 }
 
 input {
@@ -156,6 +154,7 @@ input {
 /* sidebar */
 
 aside {
+    
   section.user_info {
     margin-top: 20px;
   }
@@ -172,8 +171,9 @@ aside {
       line-height: 1;
     }
     h1 {
-      font-size: 1.4em;
-      text-align: left;
+      font-size: 50px;
+      color: #FFBC47;
+      text-align: center;
       letter-spacing: -1px;
       margin-bottom: 3px;
       margin-top: 0px;
@@ -189,3 +189,4 @@ aside {
 .gravatar_edit {
   margin-top: 15px;
 }
+

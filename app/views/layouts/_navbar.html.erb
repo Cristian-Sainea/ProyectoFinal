@@ -1,51 +1,20 @@
 <header>
  <nav class="navegacion">
-   <div class="titulo"><%= link_to "UNHOTEL", root_path %></div> 
-   <%= render "layouts/navbarNoUser" %>
-   <%= render "layouts/navbarAdmin" %>
-   <%= render "layouts/navbarHuesped" %>
-   <%= render "layouts/navbarNoUser" %>
-   <ul class="menu">
-     
-     <li><a>Huespedes</a>
-      
-       <ul class="submenu">
-         <li><%= link_to "Crear huesped", new_huesped_path %></li>
-         <li><%= link_to "Consultar huespedes", huespeds_index_path %></li>
-       </ul>
-       
-     </li>
-     <li><a>Empleados</a>
-      
-       <ul class="submenu">
-         <li><%= link_to "Crear empleado", new_empleado_path %></li>
-         <li><%= link_to "Consultar empleados", empleados_index_path %></li>
-         
-       </ul>
-       
-     </li>
-     <li><a>Servicios</a>
-     
-     
-       <ul class="submenu">
-         <li><%= link_to "Crear servicio", new_servicio_path %></li>
-         <li><%= link_to "Consultar servicios", servicios_index_path %></li>
-       </ul>
-       
-     </li>
-     <li><a>Solicitar servicios</a>
-     
-     
-       <ul class="submenu">
-         <li><%= link_to "Crear solicitud", new_solicitud_path %></li>
-         <li><%= link_to "Consultar solicitudes", solicituds_index_path %></li>
-       </ul>
-       
-     </li>
-     
-     
-        
-   </ul>
-   
+   <div class="titulo"><%= link_to "UNHOTEL", current_user %></div> 
+   <% if logged_in? %>
+        <% if current_user.role == 'Admin' %>
+            <%= render "layouts/navbarAdmin" %>
+        <% else %><% end %>
+        <% if current_user.role == 'Huesped' %>
+            <%= render "layouts/navbarHuesped" %>
+        <% else %><% end %>
+        <% if current_user.role == 'Empleado' %>
+            <%= render "layouts/navbarEmpelado" %>
+        <% else %>
+        <% end %>
+    <% else %>
+        <%= render "layouts/navbarNoUser" %>
+   <% end %>
+ 
  </nav>
 </header>

@@ -1,0 +1,24 @@
+<ul class="menu">
+    
+     <li><a>Solicitar servicios</a>
+     
+     
+       <ul class="submenu">
+         <li><%= link_to "Crear solicitud", new_solicitud_path %></li>
+         <li><%= link_to "Consultar solicitudes", solicituds_index_path %></li>
+       </ul>
+       
+     </li>   
+     
+     <li><a>Servicios</a>
+     
+     
+       <ul class="submenu">
+         <li><%= link_to "Consultar servicios", servicios_index_path %></li>
+       </ul>
+       
+     </li>
+     
+     <li><%= link_to "Log out", logout_path, method: :delete %></a></li>
+        
+   </ul>

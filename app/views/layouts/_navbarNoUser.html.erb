@@ -1,51 +1,5 @@
-<header>
- <nav class="navegacion">
-   <div class="titulo"><%= link_to "UNHOTEL", root_path %></div> 
-   <%= render "layouts/navbarNoUser" %>
-   <%= render "layouts/navbarAdmin" %>
-   <%= render "layouts/navbarHuesped" %>
-   <%= render "layouts/navbarNoUser" %>
-   <ul class="menu">
+ <ul class="menu">
      
-     <li><a>Huespedes</a>
-      
-       <ul class="submenu">
-         <li><%= link_to "Crear huesped", new_huesped_path %></li>
-         <li><%= link_to "Consultar huespedes", huespeds_index_path %></li>
-       </ul>
-       
-     </li>
-     <li><a>Empleados</a>
-      
-       <ul class="submenu">
-         <li><%= link_to "Crear empleado", new_empleado_path %></li>
-         <li><%= link_to "Consultar empleados", empleados_index_path %></li>
-         
-       </ul>
-       
-     </li>
-     <li><a>Servicios</a>
-     
-     
-       <ul class="submenu">
-         <li><%= link_to "Crear servicio", new_servicio_path %></li>
-         <li><%= link_to "Consultar servicios", servicios_index_path %></li>
-       </ul>
-       
-     </li>
-     <li><a>Solicitar servicios</a>
-     
-     
-       <ul class="submenu">
-         <li><%= link_to "Crear solicitud", new_solicitud_path %></li>
-         <li><%= link_to "Consultar solicitudes", solicituds_index_path %></li>
-       </ul>
-       
-     </li>
-     
-     
-        
-   </ul>
-   
- </nav>
-</header>
+     <li><%= link_to "Log in", login_path %></li>
+      <li><%= link_to "Sign up", new_user_path %></li>
+</ul>
