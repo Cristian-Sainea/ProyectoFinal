@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   
-  def index
-    
+  def welcome
+       @User = User.new
   end
   
 end

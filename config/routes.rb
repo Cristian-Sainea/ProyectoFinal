@@ -20,11 +20,13 @@ Rails.application.routes.draw do
     get 'empleados/show', to: "empleados#show"
     get 'empleados/new', to: "empleados#new"
     
+    get 'pages/welcome', to: "pages#welcome"
     root 'pages#welcome'
     
     resources :huespeds
     resources :solicituds
     resources :servicios
     resources :empleados
+    resources :users
     
 end
